@@ -47,14 +47,13 @@ export default function App() {
     */
 
     function handleAddWatched(movie) {
-        // Comprobamos si ya existe en la lista
         const isAlreadyWatched = watched.some((m) => m.imdbID === movie.imdbID);
 
         if (!isAlreadyWatched) {
             setWatched((watched) => [...watched, movie]);
             handleCloseMovie();
         } else {
-        // Opcional: Si ya existe, simplemente cerramos el detalle
+        // si ya existe, simplemente cerramos el detalle
         handleCloseMovie();
     }
     }
